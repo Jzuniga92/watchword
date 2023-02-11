@@ -4,8 +4,14 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 
 
-  var Uppercase = window.prompt("Select ok to include uppercase")
+  alert("Select ok to include uppercase")
 
+  alert("Select ok to include lowercase")
+
+  alert("Select ok to include numbers")
+
+  alert("Select ok to include special characters")
+  var numbercharacters = window.prompt ("Chose a number between 8 and 128")
 
 //1. prompt the user for the password criteria
 // a. password length has to be 8 - 128
