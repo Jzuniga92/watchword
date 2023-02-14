@@ -14,18 +14,21 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
-  var correctPrompts = getPrompts(); 
+  var Prompts = getPrompts(); 
   var passwordText = document.querySelector("#password");
   
-  if (correctPrompts) {
-   var newPassword = generatePassword();
-   passwordText.value = newPassword;
+  if (Prompts) {
+   var Password = generatePassword();
+   passwordText.value = Password;
+  } else {
+    passwordText.value ="";
   }
 
 function generatePassword() {
 
   var password = "";
-  for(var i = 0; i < characterLength; i++) {
+  for(var i = 0; i < characterLength; i++) 
+  {
     var randomIndex = (Math.random() * choiceArr.length);
     password = password + choiceArr[randomIndex];
   }
@@ -56,9 +59,8 @@ if (confirm("Select ok to include numbers")) {
 if (confirm("Select ok to include special characters")) {
   choiceArr = choiceArr.concat(specialCharArr);
 }
-return true;
+return "password";
 // 3. generate the password
 }
 
 //4. dispaplay the password
-  //return "password goes here";
